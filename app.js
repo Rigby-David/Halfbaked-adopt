@@ -6,11 +6,11 @@ const dogListContainer = document.getElementById('dog-list-container');
 async function loadData() {
     const dogs = await getDogs();
     console.log(dogs);
-    const main = document.querySelector('main');
+    // const main = document.querySelector('main');
 
     for (let dog of dogs) {
         const dogDiv = renderDogCard(dog);
-        main.append(dogDiv);
+        dogListContainer.append(dogDiv);
     }
 }
 
